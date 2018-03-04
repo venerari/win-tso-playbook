@@ -1,5 +1,4 @@
 ---
 - hosts: win2012r2
-  become: true
   roles:
     - ping
