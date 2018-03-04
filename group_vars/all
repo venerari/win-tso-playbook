@@ -22,8 +22,4 @@ port1: 22
 port2: 80
 
 
-ansible_user: user1
-ansible_password: Abc123456
-ansible_port: 5985
-ansible_connection: winrm
-ansible_winrm_server_cert_validation: ignore
+win_pass: Clark123456
