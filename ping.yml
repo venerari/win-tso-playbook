@@ -1,4 +1,4 @@
 ---
-- hosts: win2012r2
+- hosts: dc1
   roles:
     - ping
