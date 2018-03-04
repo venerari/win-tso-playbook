@@ -26,4 +26,4 @@ ansible_user: user1
 ansible_password: Abc123456
 ansible_port: 5985
 ansible_connection: winrm
-ansible_winrm_cert_validation: ignore
+ansible_winrm_server_cert_validation=ignore
