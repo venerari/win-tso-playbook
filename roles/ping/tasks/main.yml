@@ -1,4 +1,4 @@
 ---
 
--name: pinging
- ping:
+- name: pinging
+  ping:
