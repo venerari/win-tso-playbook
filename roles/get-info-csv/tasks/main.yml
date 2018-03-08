@@ -1,5 +1,5 @@
 ---
 
-- win_shell: echo %HOMEDIR% > 1.txt
+- win_shell: echo {{ ansible_hostname }}  > 1.txt
   args:
     executable: cmd
