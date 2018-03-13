@@ -5,6 +5,6 @@
 
   tasks:  
     - name: Put blank
-      win_shell: echo {{inventory_hostname}}  > 1.TXT
+      win_shell: ipconfig | find "IPv4 Address"  > 1.txt
       args:
         executable: cmd
