@@ -1,1 +1,10 @@
 ---
+
+- hosts: centos
+  become: true
+
+  tasks:  
+    - name: Put blank
+      win_shell: echo {{inventory_hostname}}  > 1.TXT
+      args:
+        executable: cmd

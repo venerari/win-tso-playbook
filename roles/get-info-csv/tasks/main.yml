@@ -9,12 +9,12 @@
     executable: cmd
 
 - name: Put blank
-  win_shell: echo ""  >> /tmp/{{ ansible_hostname }}_data.csv
+  win_shell: echo(  >> /tmp/{{ ansible_hostname }}_data.csv
   args:
     executable: cmd
 
 - name: Put blank
-  win_shell: echo ""  >> /tmp/{{ ansible_hostname }}_data.csv
+  win_shell: echo(  >> /tmp/{{ ansible_hostname }}_data.csv
   args:
     executable: cmd
 
