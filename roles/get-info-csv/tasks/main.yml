@@ -18,19 +18,17 @@
   args:
     executable: cmd
 
-t
-
 - name: Put blank
-  win_shell: ipconfig | find "IPv4 Address" >> {{ ansible_hostname }}_data.csv
+  win_shell: ipconfig | find "IPv4 Address" > {{ ansible_hostname }}_dos.txt
   args:
     executable: cmd
 
 - name: Fetching file
   win_copy:
-    src:  {{ ansible_hostname }}_data.csv
-    dest: {{ ansible_hostname }}_data.csv
+    src:  {{ ansible_hostname }}_dos.txt
+    dest: {{ ansible_hostname }}_linux.txt
     
- awk -F':' '{print $2}' >>  {{ ansible_hostname }}_data.csv   
+ awk -F':' '{print $2}' >>  {{ ansible_hostname }}_linux.txt
 
 - name: Get IP
   win_shell: hostname -I | cut -d' ' -f1 >> /tmp/{{ ansible_hostname }}_data.csv
